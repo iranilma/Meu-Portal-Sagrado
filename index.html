@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Meu Portal Sagrado — Santuário Pessoal de Estudos</title>
+  <meta name="description" content="Organizador e santuário pessoal de estudos para o Portal Sagrado da Prosperidade. Práticas diárias, aulas, biblioteca de mantras e diário sagrado.">
+  <link rel="stylesheet" href="css/portal.css">
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23221222' stroke='%23C5A880' stroke-width='3'/%3E%3Ccircle cx='50' cy='50' r='24' fill='none' stroke='%23C5A880' stroke-width='2'/%3E%3Ccircle cx='50' cy='26' r='24' fill='none' stroke='%23C5A880' stroke-width='1.5' opacity='0.7'/%3E%3Ccircle cx='50' cy='74' r='24' fill='none' stroke='%23C5A880' stroke-width='1.5' opacity='0.7'/%3E%3Cpolygon points='50,15 80,68 20,68' fill='none' stroke='%23E2D1B3' stroke-width='1.5'/%3E%3Cpolygon points='50,85 80,32 20,32' fill='none' stroke='%23E2D1B3' stroke-width='1.5'/%3E%3C/svg%3E">
+</head>
+<body>
+
+  <!-- SVG Linear Gradients Definition -->
+  <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true">
+    <defs>
+      <linearGradient id="goldLinear" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#E6D5B8" />
+        <stop offset="50%" stop-color="#C5A880" />
+        <stop offset="100%" stop-color="#9F7E49" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <div class="app-container">
+
+    <!-- Backdrop Overlay for Mobile Drawer -->
+    <div class="sidebar-backdrop" id="sidebar-backdrop" aria-label="Fechar menu" role="button" tabindex="0"></div>
+
+    <!-- ======================================================================
+         Sidebar Navigation
+         ====================================================================== -->
+    <aside class="app-sidebar" id="app-sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-header-top">
+          <div class="brand-emblem">
+            <div class="emblem-icon">
+              <!-- Flower of life / Sacred geometry emblem -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="10" />
+                <circle cx="12" cy="7" r="5" stroke-dasharray="2 1" />
+                <circle cx="12" cy="17" r="5" stroke-dasharray="2 1" />
+                <circle cx="7" cy="12" r="5" stroke-dasharray="2 1" />
+                <circle cx="17" cy="12" r="5" stroke-dasharray="2 1" />
+                <polygon points="12,5 18,16 6,16" stroke-width="1.2" />
+              </svg>
+            </div>
+            <div class="brand-text">
+              <h1>PORTAL SAGRADO</h1>
+              <span>Santuário Pessoal</span>
+            </div>
+          </div>
+          <button class="mobile-sidebar-close" id="sidebar-close-btn" aria-label="Fechar menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <div class="sidebar-badge">
+          <span class="dot"></span>
+          <span>Espaço Privado & Seguro</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Navegação Principal</div>
+
+        <a href="#dashboard" class="nav-item active" data-section="dashboard" onclick="window.PortalSagrado.navigateTo('dashboard'); return false;">
+          <span class="nav-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </span>
+          <span>Visão Geral</span>
+        </a>
+
+        <a href="#morning" class="nav-item" data-section="morning" onclick="window.PortalSagrado.navigateTo('morning'); return false;">
+          <span class="nav-icon">
+            <!-- Sun / Morning icon -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="1" x2="12" y2="3"/>
+              <line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/>
+              <line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+          </span>
+          <span>Prática Matinal</span>
+          <span class="nav-badge">Manhã</span>
+        </a>
+
+        <a href="#evening" class="nav-item" data-section="evening" onclick="window.PortalSagrado.navigateTo('evening'); return false;">
+          <span class="nav-icon">
+            <!-- Moon / Evening icon -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </span>
+          <span>Prática Noturna</span>
+          <span class="nav-badge">Noite</span>
+        </a>
+
+        <div class="nav-section-title" style="margin-top: 14px;">Estudo & Registro</div>
+
+        <a href="#library" class="nav-item" data-section="library" onclick="window.PortalSagrado.navigateTo('library'); return false;">
+          <span class="nav-icon">
+            <!-- Book / Library icon -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+            </svg>
+          </span>
+          <span>Biblioteca de Estudos</span>
+          <span class="nav-badge">2 PDFs</span>
+        </a>
+
+        <a href="#journey" class="nav-item" data-section="journey" onclick="window.PortalSagrado.navigateTo('journey'); return false;">
+          <span class="nav-icon">
+            <!-- Check-circle / Journey icon -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+          </span>
+          <span>Minha Jornada</span>
+        </a>
+
+        <a href="#journal" class="nav-item" data-section="journal" onclick="window.PortalSagrado.navigateTo('journal'); return false;">
+          <span class="nav-icon">
+            <!-- Feather / Journal icon -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/>
+              <line x1="16" y1="8" x2="2" y2="22"/>
+              <line x1="17.5" y1="15" x2="9" y2="15"/>
+            </svg>
+          </span>
+          <span>Diário Sagrado</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <!-- Sanctuary Ambience Sound Generator -->
+        <div class="ambience-card">
+          <div class="ambience-info">
+            <div class="ambience-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18V5l12-2v13"/>
+                <circle cx="6" cy="18" r="3"/>
+                <circle cx="18" cy="16" r="3"/>
+              </svg>
+            </div>
+            <div>
+              <div class="ambience-title">Ressonância 432Hz</div>
+              <div class="ambience-subtitle">Som ambiente sutil</div>
+            </div>
+          </div>
+          <button class="ambience-btn ambience-toggle-btn" onclick="window.PortalSagrado.toggleAmbience()" title="Ouvir frequência meditativa">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="sidebar-owner-note" style="margin-bottom: 6px;">
+          Portal Sagrado da Prosperidade<br>Estudo & Alinhamento Espiritual
+        </div>
+
+        <button class="action-btn-secondary" style="width: 100%; justify-content: center; font-size: 0.76rem; padding: 7px 10px;" onclick="window.PortalSagrado.openPrivacyModal()">
+          🔒 Privacidade & Backup
+        </button>
+      </div>
+    </aside>
+
+    <!-- ======================================================================
+         Main Content Area
+         ====================================================================== -->
+    <main class="app-main">
+
+      <!-- Top Sticky Navigation Bar -->
+      <header class="top-bar">
+        <div class="top-bar-left">
+          <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Abrir menu de navegação">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+
+          <!-- Mobile Brand Title (Displays gracefully on mobile devices) -->
+          <div class="mobile-brand-title">
+            <div class="mobile-emblem-mini">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="10" />
+                <polygon points="12,5 18,16 6,16" stroke-width="1.2" />
+              </svg>
+            </div>
+            <span>PORTAL SAGRADO</span>
+          </div>
+
+          <!-- Desktop Calendar Pill (Hidden on mobile) -->
+          <div class="top-bar-date hide-mobile">
+            <div class="calendar-pill">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+              <span id="top-bar-date-text">Hoje</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="top-bar-actions">
+          <div class="streak-pill" id="top-bar-streak-container" title="Sequência ininterrupta de práticas">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2c1.1 0 2 .9 2 2 0 .74-.4 1.39-1 1.73V7h2c2.76 0 5 2.24 5 5 0 2.22-1.45 4.1-3.48 4.75.16-.54.26-1.12.26-1.75 0-3.31-2.69-6-6-6-.54 0-1.07.08-1.57.21C9.69 8.44 10.76 8 12 8V4c0-1.1-.9-2-2-2s-2 .9-2 2v3.29c-.31.11-.6.25-.88.42C5.9 8.43 5 9.87 5 11.5c0 1.25.53 2.37 1.38 3.16C6.14 15.29 6 15.93 6 16.6 6 19.58 8.42 22 11.4 22c3.55 0 6.6-2.88 6.6-6.43 0-1.63-.6-3.13-1.6-4.28C16.89 10.5 17 9.77 17 9c0-3.87-3.13-7-7-7-1.1 0-2 .9-2 2z"/>
+            </svg>
+            <span id="top-bar-streak-text">0 dias de luz</span>
+          </div>
+
+          <button class="action-btn-secondary btn-privacy-top" onclick="window.PortalSagrado.openPrivacyModal()" title="Gerenciamento de dados locais, backup e restauração" aria-label="Privacidade & Backup">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            <span class="hide-mobile">Privacidade & Backup</span>
+          </button>
+        </div>
+      </header>
+
+      <div class="page-viewport">
+
+        <!-- ==================================================================
+             SECTION: DASHBOARD (HOME)
+             ================================================================== -->
+        <section class="section-view active" id="view-dashboard">
+          <div class="dashboard-grid">
+
+            <!-- Hero Greeting & Progress Card -->
+            <div class="overview-hero-card">
+              <div class="overview-text-block">
+                <span class="overview-greeting-sub">Santuário de Prosperidade & Conexão</span>
+                <h2 class="overview-greeting-title" id="overview-greeting">Bem-vindo(a) ao seu Portal Sagrado.</h2>
+                <p class="overview-greeting-desc">
+                  Este é o seu templo pessoal para ancorar a consciência da sua Matriz de Alma, transmutar as feridas do ego e sustentar uma vida plena de prosperidade.
+                </p>
+
+                <div class="overview-mantra-box">
+                  <div class="mantra-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2l2.4 7.2h7.6l-6.2 4.5 2.4 7.3-6.2-4.5-6.2 4.5 2.4-7.3-6.2-4.5h7.6z"/>
+                    </svg>
+                  </div>
+                  <div class="mantra-text" id="dash-mantra-text">
+                    "Eu reconheço a minha Matriz de Alma e escolho operar a partir da minha soberania divina."
+                  </div>
+                </div>
+              </div>
+
+              <!-- Daily Completion Ring & Actions -->
+              <div class="overview-progress-panel">
+                <div class="progress-header">
+                  <span>Práticas de Hoje</span>
+                  <span style="color: rgba(255,255,255,0.7); font-size: 0.75rem;">Status Diário</span>
+                </div>
+
+                <div class="progress-ring-container">
+                  <div class="progress-circle-wrap">
+                    <svg viewBox="0 0 90 90">
+                      <circle class="circle-bg" cx="45" cy="45" r="38"></circle>
+                      <circle class="circle-bar" id="dash-circle-bar" cx="45" cy="45" r="38"></circle>
+                    </svg>
+                    <div class="progress-percentage" id="dash-progress-percent">0%</div>
+                  </div>
+
+                  <div class="progress-stats-list">
+                    <div class="progress-stat-row">
+                      <div class="stat-check-indicator" id="dash-ind-morning">✓</div>
+                      <span>Ativação Matinal</span>
+                    </div>
+                    <div class="progress-stat-row">
+                      <div class="stat-check-indicator" id="dash-ind-evening">✓</div>
+                      <span>Liberação EFT Noturna</span>
+                    </div>
+                    <div class="progress-stat-row">
+                      <div class="stat-check-indicator" id="dash-ind-journal">✓</div>
+                      <span>Reflexão no Diário</span>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="progress-action-btn" onclick="window.PortalSagrado.navigateTo('journey')">
+                  Ver Minha Jornada Completa →
+                </button>
+              </div>
+            </div>
+
+            <!-- Morning and Evening Practice Cards -->
+            <div class="practice-cards-grid">
+
+              <!-- Morning Card -->
+              <div class="practice-card">
+                <div>
+                  <div class="practice-card-top">
+                    <div class="practice-time-badge morning">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                      </svg>
+                      Pela Manhã
+                    </div>
+                    <div class="practice-status-chip pending" id="dash-morning-status">Pendente</div>
+                  </div>
+
+                  <h3 class="practice-card-title">Ative seu Personagem de Matriz de Alma</h3>
+                  <p class="practice-card-desc">
+                    Inicie o dia alinhando sua frequência com a sua verdadeira essência divina. Ativação guiada para destravar a energia da criação e soberania.
+                  </p>
+
+                  <div class="practice-card-meta">
+                    <span>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                      Vídeo Aula Guiada
+                    </span>
+                    <span>•</span>
+                    <span>Ednalva Brito</span>
+                  </div>
+                </div>
+
+                <button class="practice-card-btn primary" onclick="window.PortalSagrado.navigateTo('morning')">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="5 3 19 12 5 21 5 3"/>
+                  </svg>
+                  Iniciar Prática Matinal
+                </button>
+              </div>
+
+              <!-- Evening Card -->
+              <div class="practice-card">
+                <div>
+                  <div class="practice-card-top">
+                    <div class="practice-time-badge evening">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                      </svg>
+                      Todas as Noites
+                    </div>
+                    <div class="practice-status-chip pending" id="dash-evening-status">Pendente</div>
+                  </div>
+
+                  <h3 class="practice-card-title">Libere e cure seu Personagem do Ego Ferido com EFT</h3>
+                  <p class="practice-card-desc">
+                    Feche o dia dissolvendo tensões, autocrítica e bloqueios através da técnica de acupuntura emocional EFT, pacificando seu campo energético.
+                  </p>
+
+                  <div class="practice-card-meta">
+                    <span>
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                      Sessão Prática EFT
+                    </span>
+                    <span>•</span>
+                    <span>Cura & Pacificação</span>
+                  </div>
+                </div>
+
+                <button class="practice-card-btn primary" onclick="window.PortalSagrado.navigateTo('evening')">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="5 3 19 12 5 21 5 3"/>
+                  </svg>
+                  Iniciar Prática Noturna
+                </button>
+              </div>
+
+            </div>
+
+            <!-- Quick Access to Study Library -->
+            <div class="library-preview-section">
+              <div class="library-section-header">
+                <div>
+                  <span class="hero-subtitle-tag">Acervo Exclusivo de Estudos</span>
+                  <h3>Biblioteca Sagrada</h3>
+                  <p>Documentos originais preservados para sua consulta e ativações diárias.</p>
+                </div>
+                <button class="action-btn-secondary" onclick="window.PortalSagrado.navigateTo('library')">
+                  Ver Biblioteca Completa →
+                </button>
+              </div>
+
+              <div class="library-cards-grid">
+                <!-- Doc 1 Card -->
+                <div class="library-doc-card" onclick="window.PortalSagrado.selectPdfDocument('mantras'); window.PortalSagrado.navigateTo('library');">
+                  <div class="doc-card-thumb">
+                    <img src="assets/cover-mantras-thumb.webp" alt="Ebook de Mantras Capa" loading="lazy">
+                  </div>
+                  <div class="doc-card-info">
+                    <div>
+                      <div class="doc-card-tag">Material de Apoio Oficial</div>
+                      <div class="doc-card-title">Ebook de Mantras e Ativações em Matriz de Alma</div>
+                      <div class="doc-card-meta">
+                        <span>53 páginas</span>
+                        <span>•</span>
+                        <span>PDF Original</span>
+                      </div>
+                    </div>
+                    <div class="doc-card-action">
+                      Abrir Leitura &rarr;
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Doc 2 Card -->
+                <div class="library-doc-card" onclick="window.PortalSagrado.selectPdfDocument('banho'); window.PortalSagrado.navigateTo('library');">
+                  <div class="doc-card-thumb">
+                    <img src="assets/cover-banho-thumb.webp" alt="Banho Energético Capa" loading="lazy">
+                  </div>
+                  <div class="doc-card-info">
+                    <div>
+                      <div class="doc-card-tag">Ritual de Autocuidado</div>
+                      <div class="doc-card-title">Banho Energético Auto Adoçamento e Autoestima</div>
+                      <div class="doc-card-meta">
+                        <span>4 páginas</span>
+                        <span>•</span>
+                        <span>PDF Original</span>
+                      </div>
+                    </div>
+                    <div class="doc-card-action">
+                      Abrir Leitura &rarr;
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recent Notes & Inspiring Quote Section -->
+            <div class="recent-notes-preview">
+              <div class="recent-notes-box">
+                <div class="box-header-row">
+                  <h3>Suas Reflexões Recentes</h3>
+                  <button class="action-btn-secondary" onclick="window.PortalSagrado.navigateTo('journal')">
+                    Escrever no Diário
+                  </button>
+                </div>
+                <div id="dash-recent-notes-list">
+                  <!-- Injected via JS -->
+                </div>
+              </div>
+
+              <div class="sacred-quote-card">
+                <div class="quote-symbol">✦</div>
+                <div class="quote-body">
+                  "O banho de auto adoçamento é como quem abençoa a própria existência com doçura e amor."
+                </div>
+                <div class="quote-author">Portal Sagrado da Prosperidade</div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+
+        <!-- ==================================================================
+             SECTION 1: MORNING PRACTICE
+             ================================================================== -->
+        <section class="section-view" id="view-morning">
+          <div class="section-hero">
+            <span class="hero-subtitle-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/></svg>
+              Pela manhã • Despertar da Consciência
+            </span>
+            <h2 class="hero-title">Ative seu Personagem de Matriz de Alma</h2>
+            <p class="hero-description">
+              Dedique os primeiros momentos do seu dia para sintonizar a sabedoria da sua essência pura e selar a sua intenção de prosperidade.
+            </p>
+            <div class="gold-divider"></div>
+          </div>
+
+          <div class="practice-room-container">
+            <!-- Video Column -->
+            <div class="video-stage-column">
+              <!-- Local protocol notice if opened via file:// -->
+              <div class="local-protocol-warning" style="display: none;">
+                <div class="warning-icon">💡</div>
+                <div class="warning-text">
+                  <strong>Visualização Local (file://):</strong> O YouTube bloqueia players embutidos quando abertos diretamente como arquivo local (Erro 153).<br>
+                  👉 <strong>Para assistir embutido no Mac:</strong> Dê um duplo-clique no arquivo <code>abrir-portal.command</code> (servidor local instantâneo) ou acesse pelo link da Vercel.<br>
+                  👉 Ou clique no botão <strong>Abrir no YouTube</strong> abaixo para assistir diretamente.
+                </div>
+              </div>
+
+              <div class="video-frame-card">
+                <div class="video-aspect-container">
+                  <iframe 
+                    id="morning-video-iframe"
+                    src="https://www.youtube.com/embed/lis25LXrSj8" 
+                    title="Ative seu Personagem de Matriz de Alma" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                  </iframe>
+                </div>
+
+                <div class="video-card-toolbar">
+                  <div class="video-info-badge">
+                    <div class="video-indicator-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="5 3 19 12 5 21 5 3"/>
+                      </svg>
+                    </div>
+                    <div class="video-meta-titles">
+                      <h4>Aula: Ativação Matriz de Alma</h4>
+                      <span>Ednalva Brito • Portal Sagrado</span>
+                    </div>
+                  </div>
+
+                  <div class="video-actions">
+                    <a href="https://youtu.be/lis25LXrSj8" target="_blank" rel="noopener" class="btn-external-link" title="Abrir vídeo em nova aba no YouTube">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                      Abrir no YouTube
+                    </a>
+                    <button class="btn-complete-toggle" id="btn-toggle-morning-complete" onclick="window.PortalSagrado.toggleMorningComplete()">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+                      Marcar como Concluída
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Morning Sacred Ritual Guide -->
+              <div class="ritual-steps-card">
+                <h4>Guia de Alinhamento da Matriz de Alma</h4>
+                <div class="ritual-step-item">
+                  <div class="ritual-step-num">1</div>
+                  <div class="ritual-step-content">
+                    <strong>Presença & Respiração Diafragmática</strong>
+                    <p>Feche os olhos por 2 minutos, inspire trazendo luz dourada para o peito e solte o ar liberando a urgência do dia.</p>
+                  </div>
+                </div>
+                <div class="ritual-step-item">
+                  <div class="ritual-step-num">2</div>
+                  <div class="ritual-step-content">
+                    <strong>Ativação Verbal da Personagem Soberana</strong>
+                    <p>Declare em voz alta os decretos do Ebook de Mantras, afirmando seu merecimento intrínseco e sua conexão vital.</p>
+                  </div>
+                </div>
+                <div class="ritual-step-item">
+                  <div class="ritual-step-num">3</div>
+                  <div class="ritual-step-content">
+                    <strong>Cristalização da Intenção no Diário</strong>
+                    <p>Escreva sua intenção para o dia de hoje no campo ao lado para que ela se manifeste em suas ações e decisões.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Reflection Column -->
+            <div class="practice-guide-column">
+              <div class="reflection-entry-card">
+                <h4>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                  Reflexão Matinal
+                </h4>
+                <p class="reflection-prompt-text">
+                  Como sua Matriz de Alma se sente hoje? Qual postura e energia você escolhe sustentar diante das oportunidades e desafios?
+                </p>
+
+                <textarea 
+                  class="reflection-textarea" 
+                  id="morning-reflection-input" 
+                  placeholder="Escreva aqui suas impressões, sensações corporais e a intenção pura que guiará seu dia..."
+                ></textarea>
+
+                <div class="reflection-save-row">
+                  <span class="save-status-indicator" id="morning-reflection-status">Salvo localmente</span>
+                  <button class="btn-save-reflection" onclick="window.PortalSagrado.savePracticeReflection('morning')">
+                    Salvar no Diário Sagrado
+                  </button>
+                </div>
+              </div>
+
+              <!-- Quick Link to Mantras Ebook -->
+              <div class="sacred-quote-card" style="text-align: left; padding: 22px;">
+                <div style="font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--gold-deep); font-weight: 600; margin-bottom: 6px;">
+                  Material Complementar
+                </div>
+                <div style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--plum-deep); font-weight: 600; margin-bottom: 8px;">
+                  Ebook de Mantras e Ativações
+                </div>
+                <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 14px; line-height: 1.45;">
+                  Consulte os 29 decretos oficiais na Biblioteca de Estudos para aprofundar sua prática de prosperidade.
+                </p>
+                <button class="action-btn-secondary" style="width: 100%; justify-content: center;" onclick="window.PortalSagrado.selectPdfDocument('mantras'); window.PortalSagrado.navigateTo('library');">
+                  Abrir Ebook de Mantras (53 págs) &rarr;
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- ==================================================================
+             SECTION 2: EVENING PRACTICE
+             ================================================================== -->
+        <section class="section-view" id="view-evening">
+          <div class="section-hero">
+            <span class="hero-subtitle-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+              Todas as noites • Pacificação & Cura Emocional
+            </span>
+            <h2 class="hero-title">Libere e cure seu Personagem do Ego Ferido com EFT</h2>
+            <p class="hero-description">
+              Finalize o dia dissolvendo o cansaço, os medos inconscientes e as cobranças acumuladas através da acupuntura sem agulhas (EFT).
+            </p>
+            <div class="gold-divider"></div>
+          </div>
+
+          <div class="practice-room-container">
+            <!-- Video Column -->
+            <div class="video-stage-column">
+              <!-- Local protocol notice if opened via file:// -->
+              <div class="local-protocol-warning" style="display: none;">
+                <div class="warning-icon">💡</div>
+                <div class="warning-text">
+                  <strong>Visualização Local (file://):</strong> O YouTube bloqueia players embutidos quando abertos diretamente como arquivo local (Erro 153).<br>
+                  👉 <strong>Para assistir embutido no Mac:</strong> Dê um duplo-clique no arquivo <code>abrir-portal.command</code> (servidor local instantâneo) ou acesse pelo link da Vercel.<br>
+                  👉 Ou clique no botão <strong>Abrir no YouTube</strong> abaixo para assistir diretamente.
+                </div>
+              </div>
+
+              <div class="video-frame-card">
+                <div class="video-aspect-container">
+                  <iframe 
+                    id="evening-video-iframe"
+                    src="https://www.youtube.com/embed/03G-sYb2PW0" 
+                    title="Libere e cure seu Personagem do Ego Ferido com EFT" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                  </iframe>
+                </div>
+
+                <div class="video-card-toolbar">
+                  <div class="video-info-badge">
+                    <div class="video-indicator-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="5 3 19 12 5 21 5 3"/>
+                      </svg>
+                    </div>
+                    <div class="video-meta-titles">
+                      <h4>Aula: Cura do Ego Ferido com EFT</h4>
+                      <span>Ednalva Brito • Portal Sagrado</span>
+                    </div>
+                  </div>
+
+                  <div class="video-actions">
+                    <a href="https://www.youtube.com/watch?v=03G-sYb2PW0" target="_blank" rel="noopener" class="btn-external-link" title="Abrir vídeo em nova aba no YouTube">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                      Abrir no YouTube
+                    </a>
+                    <button class="btn-complete-toggle" id="btn-toggle-evening-complete" onclick="window.PortalSagrado.toggleEveningComplete()">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+                      Marcar como Concluída
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- EFT Points Quick Reference -->
+              <div class="ritual-steps-card">
+                <h4>Pontos Fundamentais de Toque (EFT Tapping)</h4>
+                <p style="font-size: 0.84rem; color: var(--text-muted); margin-bottom: 12px;">
+                  Dê toques suaves (cerca de 5 a 7 toques) em cada ponto enquanto repete a frase de liberação ensinada na aula:
+                </p>
+                <div class="eft-points-grid">
+                  <div class="eft-point-pill"><span class="eft-point-dot"></span> 1. Ponto do Karatê (mão)</div>
+                  <div class="eft-point-pill"><span class="eft-point-dot"></span> 2. Topo da Cabeça</div>
+                  <div class="eft-point-pill"><span class="eft-point-dot"></span> 3. Início da Sobrancelha</div>
+                  <div class="eft-point-pill"><span class="eft-point-dot"></span> 4. Lado do Olho (têmpora)</div>
+                  <div class="eft-point-pill"><span class="eft-point-dot"></span> 5. Abaixo do Olho</div>
+                  <div class="eft-point-pill"><span class="eft-point-dot"></span> 6. Abaixo do Nariz</div>
+                  <div class="eft-point-pill"><span class="eft-point-dot"></span> 7. Sulco do Queixo</div>
+                  <div class="eft-point-pill"><span class="eft-point-dot"></span> 8. Abaixo da Clavícula</div>
+                  <div class="eft-point-pill" style="grid-column: span 2;"><span class="eft-point-dot"></span> 9. Abaixo do Braço (linha do peito)</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Reflection Column -->
+            <div class="practice-guide-column">
+              <div class="reflection-entry-card">
+                <h4>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                  Reflexão & Liberação Noturna
+                </h4>
+                <p class="reflection-prompt-text">
+                  O que o seu Ego Ferido tentou controlar ou temer hoje? O que você escolhe entregar e perdoar antes de dormir?
+                </p>
+
+                <textarea 
+                  class="reflection-textarea" 
+                  id="evening-reflection-input" 
+                  placeholder="Escreva aquilo que você solta hoje, agradecendo pela proteção e escolhendo o descanso em paz..."
+                ></textarea>
+
+                <div class="reflection-save-row">
+                  <span class="save-status-indicator" id="evening-reflection-status">Salvo localmente</span>
+                  <button class="btn-save-reflection" onclick="window.PortalSagrado.savePracticeReflection('evening')">
+                    Salvar no Diário Sagrado
+                  </button>
+                </div>
+              </div>
+
+              <!-- Suggestion for Energy Bath -->
+              <div class="sacred-quote-card" style="text-align: left; padding: 22px;">
+                <div style="font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--gold-deep); font-weight: 600; margin-bottom: 6px;">
+                  Ritual de Regeneração
+                </div>
+                <div style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--plum-deep); font-weight: 600; margin-bottom: 8px;">
+                  Banho Energético de Auto Adoçamento
+                </div>
+                <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 14px; line-height: 1.45;">
+                  Fortaleça sua autoestima e presença com manjericão, alecrim e pétalas de rosa. Indicado especialmente nas noites de sexta-feira.
+                </p>
+                <button class="action-btn-secondary" style="width: 100%; justify-content: center;" onclick="window.PortalSagrado.selectPdfDocument('banho'); window.PortalSagrado.navigateTo('library');">
+                  Ver Instruções do Banho (4 págs) &rarr;
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- ==================================================================
+             SECTION 3: STUDY LIBRARY
+             ================================================================== -->
+        <section class="section-view" id="view-library">
+          <div class="section-hero">
+            <span class="hero-subtitle-tag">Acervo Privado de Consulta</span>
+            <h2 class="hero-title">Biblioteca Sagrada de Estudos</h2>
+            <p class="hero-description">
+              Acesse os materiais oficiais do curso em seus formatos originais, preservados com integridade e alta resolução para sua leitura e prática.
+            </p>
+            <div class="gold-divider"></div>
+          </div>
+
+          <div class="library-viewer-layout">
+            <!-- Document Switcher Tabs -->
+            <div class="library-tabs-bar">
+              <button class="lib-tab-btn active" data-doc="mantras" onclick="window.PortalSagrado.selectPdfDocument('mantras')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                <span>Ebook de Mantras & Ativações</span>
+                <span class="lib-tab-badge">53 páginas</span>
+              </button>
+
+              <button class="lib-tab-btn" data-doc="banho" onclick="window.PortalSagrado.selectPdfDocument('banho')">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+                <span>Banho Energético Auto Adoçamento</span>
+                <span class="lib-tab-badge">4 páginas</span>
+              </button>
+            </div>
+
+            <!-- Active Document Header & Quick Actions -->
+            <div class="library-doc-header-card">
+              <div class="doc-info-block">
+                <h3 id="lib-doc-title">Ebook de Mantras e Ativações em Matriz de Alma</h3>
+                <div class="doc-info-meta">
+                  <span id="lib-doc-subtitle">Programa Portal Sagrado da Prosperidade • Ednalva Brito</span>
+                  <span>•</span>
+                  <span id="lib-doc-pages">53 páginas</span>
+                  <span>•</span>
+                  <span id="lib-doc-size">3.0 MB</span>
+                </div>
+              </div>
+
+              <div class="doc-header-actions">
+                <button class="btn-library-action primary" onclick="window.PortalSagrado.openZenModal()" title="Expandir leitor em tela inteira com foco de estudo">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                  Modo Leitura Zen
+                </button>
+                <a id="lib-btn-newtab" href="docs/ebook-mantras.pdf" target="_blank" rel="noopener noreferrer" class="btn-library-action" title="Abrir documento em aba separada do navegador">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Nova Aba
+                </a>
+                <a id="lib-btn-download" href="docs/Ebook de Mantras e Ativações em Matriz de Alma para o Programa Portal Sagrado da Prosperidade.pdf" download class="btn-library-action" title="Baixar arquivo PDF original para seu dispositivo">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  Baixar Original
+                </a>
+              </div>
+            </div>
+
+            <!-- Embedded PDF Frame -->
+            <div class="pdf-viewer-frame-container">
+              <iframe 
+                id="lib-pdf-iframe" 
+                src="docs/ebook-mantras.pdf#toolbar=1&navpanes=0&scrollbar=1" 
+                title="Leitor de PDF Portal Sagrado">
+              </iframe>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- ==================================================================
+             SECTION 4: MY DAILY JOURNEY
+             ================================================================== -->
+        <section class="section-view" id="view-journey">
+          <div class="section-hero">
+            <span class="hero-subtitle-tag">Consistência & Devoção Pessoal</span>
+            <h2 class="hero-title">Minha Jornada Diária</h2>
+            <p class="hero-description">
+              Acompanhe seu compromisso com suas práticas matinais e noturnas, cultivando a disciplina sagrada da prosperidade.
+            </p>
+            <div class="gold-divider"></div>
+          </div>
+
+          <!-- Privacy & Multi-User Notice Banner -->
+          <div class="privacy-notice-banner">
+            <div class="notice-content">
+              <div class="notice-icon">🔒</div>
+              <div class="notice-text">
+                <strong>Progresso Privado & Local:</strong> Seus hábitos e checklists são salvos somente neste navegador. Ao acessar de outro aparelho ou perfil, seus dados começam zerados. Use <strong>Backup & Restaurar</strong> para sincronizar.
+              </div>
+            </div>
+            <button class="action-btn-secondary" style="padding: 5px 12px; font-size: 0.78rem; white-space: nowrap;" onclick="window.PortalSagrado.openPrivacyModal()">
+              Backup / Restaurar
+            </button>
+          </div>
+
+          <div class="journey-dashboard-grid">
+            <!-- Left: Checklists for selected date -->
+            <div class="journey-checklists-wrapper">
+              
+              <!-- Date Selector Bar -->
+              <div class="library-doc-header-card" style="padding: 16px 24px;">
+                <div style="display: flex; align-items: center; gap: 14px;">
+                  <span style="font-weight: 600; color: var(--plum-deep); font-size: 0.95rem;">Data da Jornada:</span>
+                  <input type="date" id="journey-date-picker" class="journal-input-text" style="width: auto; padding: 6px 12px;">
+                </div>
+                <div style="font-size: 0.88rem; color: var(--text-muted);" id="journey-selected-date-text">
+                  Hoje
+                </div>
+              </div>
+
+              <!-- Morning Checklist Card -->
+              <div class="checklist-card">
+                <div class="checklist-header">
+                  <div class="checklist-header-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color: var(--gold-deep);"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/></svg>
+                    <h4>Práticas Matinais • Matriz de Alma</h4>
+                  </div>
+                  <span class="checklist-time-tag morning">Manhã</span>
+                </div>
+
+                <div class="checklist-items-list" id="journey-morning-checklist">
+                  <!-- Rendered dynamically -->
+                </div>
+              </div>
+
+              <!-- Evening Checklist Card -->
+              <div class="checklist-card">
+                <div class="checklist-header">
+                  <div class="checklist-header-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color: var(--plum-medium);"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <h4>Práticas Noturnas • Liberação EFT</h4>
+                  </div>
+                  <span class="checklist-time-tag evening">Noite</span>
+                </div>
+
+                <div class="checklist-items-list" id="journey-evening-checklist">
+                  <!-- Rendered dynamically -->
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right: Weekly Overview & Consistency Metrics -->
+            <div class="journey-stats-column">
+              
+              <div class="consistency-card">
+                <h4>Visão Semanal de Consistência</h4>
+                <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 16px;">
+                  Últimos 7 dias de prática e presença consciente. Clique em qualquer dia para revisar:
+                </p>
+
+                <div class="weekly-pill-row" id="journey-weekly-pills">
+                  <!-- Injected via JS -->
+                </div>
+
+                <div class="progress-ring-container" style="justify-content: center; margin: 24px 0 12px;">
+                  <div style="text-align: center;">
+                    <div style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 700; color: var(--plum-deep);" id="journey-progress-percent">
+                      0%
+                    </div>
+                    <div style="font-size: 0.85rem; color: var(--text-muted);" id="journey-tasks-counter">
+                      0 de 6 hábitos praticados
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="consistency-card">
+                <h4>Métricas do Santuário</h4>
+                <div class="streak-metrics-grid">
+                  <div class="metric-box">
+                    <div class="metric-value" id="journey-current-streak">0</div>
+                    <div class="metric-label">Dias Seguidos</div>
+                  </div>
+                  <div class="metric-box">
+                    <div class="metric-value">100%</div>
+                    <div class="metric-label">Privacidade Local</div>
+                  </div>
+                  <div class="metric-box">
+                    <div class="metric-value">2</div>
+                    <div class="metric-label">Aulas Centrais</div>
+                  </div>
+                  <div class="metric-box">
+                    <div class="metric-value">57</div>
+                    <div class="metric-label">Páginas de Estudo</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+
+        <!-- ==================================================================
+             SECTION 5: PERSONAL JOURNAL
+             ================================================================== -->
+        <section class="section-view" id="view-journal">
+          <div class="section-hero">
+            <span class="hero-subtitle-tag">Registro Íntimo & Transformação</span>
+            <h2 class="hero-title">Diário Sagrado</h2>
+            <p class="hero-description">
+              Seu espaço confidencial para registrar percepções, catarses, intenções da Matriz de Alma e decretos pessoais. Todos os dados permanecem salvos somente no seu navegador.
+            </p>
+            <div class="gold-divider"></div>
+          </div>
+
+          <!-- Privacy & Multi-User Notice Banner -->
+          <div class="privacy-notice-banner">
+            <div class="notice-content">
+              <div class="notice-icon">🛡️</div>
+              <div class="notice-text">
+                <strong>Diário 100% Confidencial:</strong> Suas anotações nunca são enviadas a nenhum servidor. Elas ficam armazenadas no <code>localStorage</code> deste dispositivo. Para migrar ou guardar com segurança, utilize o backup em JSON.
+              </div>
+            </div>
+            <button class="action-btn-secondary" style="padding: 5px 12px; font-size: 0.78rem; white-space: nowrap;" onclick="window.PortalSagrado.openPrivacyModal()">
+              Backup / Restaurar
+            </button>
+          </div>
+
+          <div class="journal-view-layout">
+            <!-- Left: Entry Editor Form -->
+            <div class="journal-editor-card">
+              <div class="journal-editor-header">
+                <h3>Nova Entrada Sagrada</h3>
+                <button class="action-btn-secondary" onclick="window.PortalSagrado.clearJournalForm()" title="Limpar campos para criar nova entrada">
+                  Nova Entrada
+                </button>
+              </div>
+
+              <form onsubmit="event.preventDefault(); window.PortalSagrado.saveJournalEntry();">
+                <div class="journal-form-group">
+                  <label class="journal-label" for="journal-input-date">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    Data do Registro
+                  </label>
+                  <input type="date" id="journal-input-date" class="journal-input-text" required>
+                </div>
+
+                <div class="journal-form-group">
+                  <label class="journal-label">
+                    Estado Energético / Sintonia
+                  </label>
+                  <div class="energy-selector-row">
+                    <button type="button" class="energy-chip active">✨ Plena & Próspera</button>
+                    <button type="button" class="energy-chip">🌸 Serena & Receptiva</button>
+                    <button type="button" class="energy-chip">🕊️ Curando & Soltando</button>
+                    <button type="button" class="energy-chip">⚖️ Em Equilíbrio</button>
+                    <button type="button" class="energy-chip">💫 Conexão Vital</button>
+                  </div>
+                </div>
+
+                <div class="journal-form-group">
+                  <label class="journal-label" for="journal-input-morning">
+                    ☀️ Intenção & Reflexão Matinal (Matriz de Alma)
+                  </label>
+                  <textarea id="journal-input-morning" class="journal-textarea" placeholder="Qual energia você invoca e sustenta para o seu dia?"></textarea>
+                </div>
+
+                <div class="journal-form-group">
+                  <label class="journal-label" for="journal-input-evening">
+                    🌙 Reflexão Noturna & Liberação EFT
+                  </label>
+                  <textarea id="journal-input-evening" class="journal-textarea" placeholder="O que você dissolveu e pacificou nesta noite?"></textarea>
+                </div>
+
+                <div class="journal-form-group">
+                  <label class="journal-label" for="journal-input-insights">
+                    💎 Insights, Revelações & Mantras Pessoais
+                  </label>
+                  <textarea id="journal-input-insights" class="journal-textarea" placeholder="Frases marcantes, lições das aulas ou decretos que ressoaram com você..."></textarea>
+                </div>
+
+                <div class="journal-form-group">
+                  <label class="journal-label" for="journal-input-notes">
+                    📝 Anotações Livres
+                  </label>
+                  <textarea id="journal-input-notes" class="journal-textarea" placeholder="Qualquer pensamento adicional, sonhos ou planos de autocuidado..."></textarea>
+                </div>
+
+                <div class="journal-editor-actions">
+                  <button type="button" class="btn-journal-clear" onclick="window.PortalSagrado.clearJournalForm()">
+                    Cancelar
+                  </button>
+                  <button type="submit" class="btn-journal-save">
+                    Salvar no Diário Sagrado
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Right: Search & History List -->
+            <div class="journal-history-column">
+              <div class="history-search-card">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--text-soft);"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <input type="text" id="journal-search-input" placeholder="Buscar por palavra-chave ou data...">
+                <button class="action-btn-secondary" style="padding: 4px 10px; font-size: 0.75rem;" onclick="window.PortalSagrado.exportJournalAsText()" title="Exportar todas as anotações em arquivo de texto">
+                  Exportar TXT
+                </button>
+              </div>
+
+              <div class="journal-entries-scroll" id="journal-entries-list">
+                <!-- Rendered dynamically -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+  </div>
+
+  <!-- ======================================================================
+       ZEN FULLSCREEN READING MODAL
+       ====================================================================== -->
+  <div class="modal-backdrop" id="zen-modal" onclick="if(event.target === this) window.PortalSagrado.closeZenModal();">
+    <div class="zen-modal-window">
+      <div class="zen-modal-header">
+        <div class="zen-modal-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          <span id="zen-modal-title-text">Modo Leitura Zen</span>
+        </div>
+        <button class="zen-close-btn" onclick="window.PortalSagrado.closeZenModal()" title="Fechar tela cheia (ESC)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="zen-modal-body">
+        <iframe id="zen-modal-iframe" src="about:blank" title="Zen PDF Viewer"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       PRIVACY & DATA BACKUP / RESTORE MODAL
+       ====================================================================== -->
+  <div class="modal-backdrop" id="privacy-modal" onclick="if(event.target === this) window.PortalSagrado.closePrivacyModal();">
+    <div class="privacy-modal-window">
+      <div class="privacy-modal-header">
+        <h3>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+          Privacidade & Armazenamento Local
+        </h3>
+        <button class="zen-close-btn" onclick="window.PortalSagrado.closePrivacyModal()" title="Fechar (ESC)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="privacy-modal-body">
+        <div class="privacy-pillars-list">
+          <div class="privacy-pillar-item">
+            <div class="pillar-icon">🔒</div>
+            <div class="pillar-content">
+              <strong>100% Privado no Seu Navegador</strong>
+              <p>Não há login, cadastro nem banco de dados em servidor externo. Suas reflexões, intenções e hábitos diários são gravados unicamente no <code>localStorage</code> deste navegador.</p>
+            </div>
+          </div>
+
+          <div class="privacy-pillar-item">
+            <div class="pillar-icon">📱</div>
+            <div class="pillar-content">
+              <strong>Específico Deste Dispositivo / Perfil</strong>
+              <p>Cada pessoa ou dispositivo que acessa a aplicação possui dados completamente independentes. Ninguém mais tem acesso ao seu diário pessoal.</p>
+            </div>
+          </div>
+
+          <div class="privacy-pillar-item">
+            <div class="pillar-icon">💾</div>
+            <div class="pillar-content">
+              <strong>Como Mudar de Aparelho ou Proteger Seus Dados</strong>
+              <p>Para transferir seu progresso ou manter um backup seguro, clique em <strong>Baixar Backup (JSON)</strong>. No outro dispositivo ou navegador, clique em <strong>Restaurar Backup (JSON)</strong> para importar tudo instantaneamente.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="data-actions-card">
+          <h4>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Gerenciamento de Dados Locais
+          </h4>
+          <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 12px;">
+            Exporte ou restaure suas anotações e hábitos a qualquer momento:
+          </p>
+
+          <div class="data-buttons-grid">
+            <button class="btn-data-action primary" onclick="window.PortalSagrado.exportBackupJSON()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Baixar Backup (JSON)
+            </button>
+
+            <button class="btn-data-action secondary" onclick="window.PortalSagrado.triggerRestoreFileInput()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+              Restaurar Backup (JSON)
+            </button>
+
+            <button class="btn-data-action secondary" onclick="window.PortalSagrado.exportJournalAsText()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              Exportar Diário (TXT)
+            </button>
+
+            <button class="btn-data-action danger" onclick="window.PortalSagrado.resetAllLocalData()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+              Limpar Dados Deste Navegador
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hidden File Input for JSON Restore -->
+  <input type="file" id="restore-file-input" accept=".json,application/json" style="display: none;">
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Key listener for ESC to close modals -->
+  <script>
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        if (window.PortalSagrado) {
+          if (window.PortalSagrado.closeZenModal) window.PortalSagrado.closeZenModal();
+          if (window.PortalSagrado.closePrivacyModal) window.PortalSagrado.closePrivacyModal();
+        }
+      }
+    });
+  </script>
+
+  <!-- Application Script -->
+  <script src="js/app.js"></script>
+</body>
+</html>

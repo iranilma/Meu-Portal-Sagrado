@@ -1,0 +1,11 @@
+# OS & Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temp test files
+test-*.html
+test_*.py
+run_multiuser_test.py
+*.png

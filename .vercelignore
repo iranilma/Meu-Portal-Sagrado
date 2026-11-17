@@ -1,0 +1,8 @@
+# Arquivos e scripts exclusivos de uso local no Mac
+abrir-portal.command
+run_multiuser_test.py
+test-multiuser-runner.html
+test_youtube_embeds.py
+
+# Arquivos do sistema macOS
+.DS_Store
