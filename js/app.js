@@ -344,6 +344,18 @@
       }
     });
 
+    // Update Return to Home Button visibility in Top Bar
+    const topBackBtn = document.getElementById('btn-top-back');
+    if (topBackBtn) {
+      if (sectionId === 'dashboard') {
+        topBackBtn.style.display = 'none';
+        document.body.classList.remove('in-subview');
+      } else {
+        topBackBtn.style.display = 'inline-flex';
+        document.body.classList.add('in-subview');
+      }
+    }
+
     // Close Mobile Drawer if open
     closeMobileMenu();
 

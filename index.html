@@ -34,7 +34,7 @@
     <aside class="app-sidebar" id="app-sidebar">
       <div class="sidebar-header">
         <div class="sidebar-header-top">
-          <div class="brand-emblem">
+          <div class="brand-emblem" onclick="window.PortalSagrado.navigateTo('dashboard')" style="cursor: pointer;" title="Ir para a página inicial">
             <div class="emblem-icon">
               <!-- Flower of life / Sacred geometry emblem -->
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
@@ -194,8 +194,16 @@
             </svg>
           </button>
 
+          <!-- Return Home Button in Top Bar (visible when inside inner sections) -->
+          <button class="btn-top-back" id="btn-top-back" onclick="window.PortalSagrado.navigateTo('dashboard')" title="Voltar à página inicial" aria-label="Voltar à página inicial">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            <span>Início</span>
+          </button>
+
           <!-- Mobile Brand Title (Displays gracefully on mobile devices) -->
-          <div class="mobile-brand-title">
+          <div class="mobile-brand-title" onclick="window.PortalSagrado.navigateTo('dashboard')" style="cursor: pointer;" title="Ir para a página inicial">
             <div class="mobile-emblem-mini">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
                 <circle cx="12" cy="12" r="10" />
@@ -473,6 +481,12 @@
              SECTION 1: MORNING PRACTICE
              ================================================================== -->
         <section class="section-view" id="view-morning">
+          <div class="view-header-navigation">
+            <button class="btn-return-home" onclick="window.PortalSagrado.navigateTo('dashboard')" title="Voltar para a página inicial">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              <span>Voltar ao Início</span>
+            </button>
+          </div>
           <div class="section-hero">
             <span class="hero-subtitle-tag">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/></svg>
@@ -605,6 +619,12 @@
               </div>
             </div>
           </div>
+          <div class="view-footer-navigation">
+            <button class="btn-return-home" onclick="window.PortalSagrado.navigateTo('dashboard')" title="Voltar para a página inicial">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              <span>Voltar à Página Inicial</span>
+            </button>
+          </div>
         </section>
 
 
@@ -612,6 +632,12 @@
              SECTION 2: EVENING PRACTICE
              ================================================================== -->
         <section class="section-view" id="view-evening">
+          <div class="view-header-navigation">
+            <button class="btn-return-home" onclick="window.PortalSagrado.navigateTo('dashboard')" title="Voltar para a página inicial">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              <span>Voltar ao Início</span>
+            </button>
+          </div>
           <div class="section-hero">
             <span class="hero-subtitle-tag">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -737,6 +763,12 @@
               </div>
             </div>
           </div>
+          <div class="view-footer-navigation">
+            <button class="btn-return-home" onclick="window.PortalSagrado.navigateTo('dashboard')" title="Voltar para a página inicial">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              <span>Voltar à Página Inicial</span>
+            </button>
+          </div>
         </section>
 
 
@@ -744,6 +776,12 @@
              SECTION 3: STUDY LIBRARY
              ================================================================== -->
         <section class="section-view" id="view-library">
+          <div class="view-header-navigation">
+            <button class="btn-return-home" onclick="window.PortalSagrado.navigateTo('dashboard')" title="Voltar para a página inicial">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              <span>Voltar ao Início</span>
+            </button>
+          </div>
           <div class="section-hero">
             <span class="hero-subtitle-tag">Acervo Privado de Consulta</span>
             <h2 class="hero-title">Biblioteca Sagrada de Estudos</h2>
@@ -807,6 +845,12 @@
               </iframe>
             </div>
           </div>
+          <div class="view-footer-navigation">
+            <button class="btn-return-home" onclick="window.PortalSagrado.navigateTo('dashboard')" title="Voltar para a página inicial">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              <span>Voltar à Página Inicial</span>
+            </button>
+          </div>
         </section>
 
 
@@ -814,6 +858,12 @@
              SECTION 4: MY DAILY JOURNEY
              ================================================================== -->
         <section class="section-view" id="view-journey">
+          <div class="view-header-navigation">
+            <button class="btn-return-home" onclick="window.PortalSagrado.navigateTo('dashboard')" title="Voltar para a página inicial">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              <span>Voltar ao Início</span>
+            </button>
+          </div>
           <div class="section-hero">
             <span class="hero-subtitle-tag">Consistência & Devoção Pessoal</span>
             <h2 class="hero-title">Minha Jornada Diária</h2>
@@ -932,6 +982,12 @@
 
             </div>
           </div>
+          <div class="view-footer-navigation">
+            <button class="btn-return-home" onclick="window.PortalSagrado.navigateTo('dashboard')" title="Voltar para a página inicial">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              <span>Voltar à Página Inicial</span>
+            </button>
+          </div>
         </section>
 
 
@@ -939,6 +995,12 @@
              SECTION 5: PERSONAL JOURNAL
              ================================================================== -->
         <section class="section-view" id="view-journal">
+          <div class="view-header-navigation">
+            <button class="btn-return-home" onclick="window.PortalSagrado.navigateTo('dashboard')" title="Voltar para a página inicial">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              <span>Voltar ao Início</span>
+            </button>
+          </div>
           <div class="section-hero">
             <span class="hero-subtitle-tag">Registro Íntimo & Transformação</span>
             <h2 class="hero-title">Diário Sagrado</h2>
@@ -1046,6 +1108,12 @@
                 <!-- Rendered dynamically -->
               </div>
             </div>
+          </div>
+          <div class="view-footer-navigation">
+            <button class="btn-return-home" onclick="window.PortalSagrado.navigateTo('dashboard')" title="Voltar para a página inicial">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              <span>Voltar à Página Inicial</span>
+            </button>
           </div>
         </section>
 
