@@ -1718,24 +1718,250 @@ button {
   border-color: var(--gold-primary);
 }
 
-/* PDF Embedded Container */
-.pdf-viewer-frame-container {
+/* ==========================================================================
+   Native In-App Continuous Scrolling PDF Reader (PDF.js)
+   ========================================================================== */
+
+.pdf-reader-interactive {
   background: var(--plum-dark);
   border-radius: var(--radius-xl);
   border: 1px solid var(--border-gold);
   overflow: hidden;
   box-shadow: var(--shadow-elevated);
-  height: 780px;
-  position: relative;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
-.pdf-viewer-frame-container iframe {
+/* Sticky Reader Toolbar */
+.pdf-reader-toolbar {
+  background: rgba(34, 18, 34, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(197, 168, 128, 0.3);
+  padding: 10px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  z-index: 10;
+}
+
+.pdf-toolbar-left,
+.pdf-toolbar-center,
+.pdf-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pdf-tool-btn,
+.pdf-ctrl-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34px;
+  height: 34px;
+  padding: 0 10px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(197, 168, 128, 0.3);
+  color: var(--gold-light);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.pdf-tool-btn:hover,
+.pdf-ctrl-btn:hover {
+  background: rgba(197, 168, 128, 0.25);
+  border-color: var(--gold-primary);
+  color: #FFF;
+}
+
+.pdf-page-indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--gold-light);
+  font-size: 0.84rem;
+  font-weight: 500;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(197, 168, 128, 0.2);
+}
+
+.pdf-page-indicator input {
+  width: 44px;
+  height: 26px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--border-gold);
+  border-radius: 6px;
+  color: #FFF;
+  text-align: center;
+  font-size: 0.86rem;
+  font-weight: 600;
+  outline: none;
+}
+
+.pdf-page-indicator input:focus {
+  border-color: #FFD166;
+  box-shadow: 0 0 8px rgba(255, 209, 102, 0.4);
+}
+
+.pdf-zoom-level {
+  font-size: 0.8rem;
+  color: var(--gold-light);
+  font-weight: 600;
+  min-width: 48px;
+  text-align: center;
+}
+
+.pdf-reading-mode-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-primary);
+  background: rgba(197, 168, 128, 0.12);
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(197, 168, 128, 0.25);
+}
+
+.pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #4CAF50;
+  box-shadow: 0 0 6px #4CAF50;
+}
+
+/* Continuous Scroll Viewport */
+.pdf-scroll-viewport {
+  width: 100%;
+  height: 750px;
+  overflow-y: auto;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  background: #180D18; /* Rich spiritual dark plum reading sanctuary */
+  padding: 24px 16px;
+  position: relative;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+/* Loading State Overlay */
+.pdf-loading-state {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(24, 13, 24, 0.92);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  z-index: 5;
+  color: var(--gold-light);
+  transition: opacity 0.3s ease;
+}
+
+.spiritual-spinner {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 3px solid rgba(197, 168, 128, 0.2);
+  border-top-color: var(--gold-primary);
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.pdf-loading-text {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  color: var(--gold-light);
+}
+
+/* Continuous Pages Container */
+.pdf-canvas-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Single Page Card */
+.pdf-page-card {
+  position: relative;
+  background: #FFFFFF;
+  border-radius: 6px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(197, 168, 128, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  max-width: 100%;
+  transition: box-shadow 0.25s ease;
+}
+
+.pdf-page-card:hover {
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6), 0 0 0 1px var(--gold-primary);
+}
+
+.pdf-page-card canvas {
+  display: block;
+  max-width: 100%;
+  height: auto !important;
+  background: #FFF;
+}
+
+.pdf-page-badge {
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  background: rgba(24, 13, 24, 0.8);
+  color: var(--gold-light);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 12px;
+  border: 1px solid rgba(197, 168, 128, 0.3);
+  pointer-events: none;
+  backdrop-filter: blur(4px);
+}
+
+.pdf-page-card.loading {
+  background: #251425;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Fallback Container */
+.pdf-fallback-frame-container {
+  height: 700px;
+}
+
+.pdf-fallback-frame-container iframe {
   width: 100%;
   height: 100%;
   border: none;
-  background: #525659;
 }
 
 /* ==========================================================================
@@ -1748,14 +1974,14 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(34, 18, 34, 0.85);
+  background: rgba(34, 18, 34, 0.90);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   z-index: 999;
   display: none;
   align-items: center;
   justify-content: center;
-  padding: 24px;
+  padding: 20px;
 }
 
 .modal-backdrop.active {
@@ -1763,13 +1989,13 @@ button {
 }
 
 .zen-modal-window {
-  width: 95%;
-  height: 92vh;
+  width: 96%;
+  height: 94vh;
   max-width: 1400px;
-  background: var(--bg-surface);
+  background: #180D18;
   border-radius: var(--radius-xl);
   border: 1px solid var(--border-gold);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -1790,6 +2016,7 @@ button {
   align-items: center;
   justify-content: space-between;
   color: var(--text-light);
+  flex-shrink: 0;
 }
 
 .zen-modal-title {
@@ -1799,6 +2026,16 @@ button {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.zen-page-indicator {
+  font-size: 0.84rem;
+  color: var(--gold-light);
+  font-weight: 500;
+  padding: 4px 10px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  border: 1px solid rgba(197, 168, 128, 0.25);
 }
 
 .zen-close-btn {
@@ -1811,6 +2048,7 @@ button {
   align-items: center;
   justify-content: center;
   transition: var(--transition-smooth);
+  cursor: pointer;
 }
 
 .zen-close-btn:hover {
@@ -1820,13 +2058,21 @@ button {
 
 .zen-modal-body {
   flex: 1;
-  background: #2D2D2D;
+  background: #180D18;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-.zen-modal-body iframe {
+.zen-pdf-scroll-viewport {
+  flex: 1;
   width: 100%;
   height: 100%;
-  border: none;
+  overflow-y: auto;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 24px 16px;
+  box-sizing: border-box;
 }
 
 /* ==========================================================================
